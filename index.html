@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Marine House Gym · Fulwell, Sunderland (concept)</title>
+<meta name="description" content="Concept redesign: an old-school community gym in Fulwell, Sunderland, under new management, with new changing rooms and a recovery room.">
+<meta name="theme-color" content="#0d0e10">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='29' fill='%230d0e10' stroke='%23f1efe9' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='9' fill='none' stroke='%23d7262e' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/kettlebell-hero.webp" type="image/webp">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+html,body{background:#0d0e10;color:#f1efe9}
+:root{
+  --black:#0d0e10;--char:#17191c;--steel:#2a2e33;--chalk:#f1efe9;--chalk-70:rgba(241,239,233,.72);--chalk-45:rgba(241,239,233,.45);
+  --chalk-60:rgba(241,239,233,.62);--line:rgba(241,239,233,.12);--red:#d7262e;--red-dark:#a91d24;
+  --gut:clamp(20px,4vw,56px);--ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box;margin:0}
+html{overflow-x:clip;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font:400 17px/1.6 Barlow,"Helvetica Neue",Arial,sans-serif;overflow-x:clip}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:rgba(215,38,46,.4)}
+.disp{font-family:"Bebas Neue",Impact,"Arial Narrow",sans-serif;font-weight:400;letter-spacing:.005em;text-transform:uppercase;line-height:.9}
+.slashes{display:inline-flex;gap:4px;margin-right:12px}.slashes i{width:10px;height:14px;background:var(--red);transform:skewX(-20deg)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:16px 28px;border-radius:6px;font:600 17px/1 Barlow,"Helvetica Neue",Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;transition:background-color .2s,transform .2s;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:none}
+.btn--red{background:linear-gradient(180deg,#e0323a,var(--red-dark));color:#fff;box-shadow:0 10px 24px -10px rgba(215,38,46,.6)}
+.btn--red:hover{transform:translateY(-2px)}
+.btn--line{color:var(--chalk);box-shadow:inset 0 0 0 2px var(--chalk)}.btn--line:hover{background:rgba(241,239,233,.08)}
+.btn:active{transform:scale(.97)}
+:focus-visible{outline:3px solid var(--chalk);outline-offset:3px}
+.grain{position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.09;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.knurl{background:
+  repeating-linear-gradient(45deg,rgba(0,0,0,.38) 0 1.5px,transparent 1.5px 6px),
+  repeating-linear-gradient(-45deg,rgba(0,0,0,.38) 0 1.5px,transparent 1.5px 6px),
+  linear-gradient(180deg,#f7f8fa 0%,#b9bec6 38%,#ffffff 52%,#8b9099 70%,#d9dce1 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 2px 0 rgba(0,0,0,.6))}
+.knurl--sheen{background:
+  linear-gradient(100deg,transparent 42%,rgba(255,255,255,.3) 50%,transparent 58%),
+  repeating-linear-gradient(45deg,rgba(0,0,0,.38) 0 1.5px,transparent 1.5px 6px),
+  repeating-linear-gradient(-45deg,rgba(0,0,0,.38) 0 1.5px,transparent 1.5px 6px),
+  linear-gradient(180deg,#f7f8fa 0%,#b9bec6 38%,#ffffff 52%,#8b9099 70%,#d9dce1 100%);
+  background-size:300% 100%,auto,auto,auto;background-repeat:no-repeat,repeat,repeat,no-repeat;background-position:110% 0,0 0,0 0,0 0;
+  -webkit-background-clip:text;background-clip:text;animation:sheen 1.2s cubic-bezier(.4,0,.2,1) 1.2s both}
+@supports not ((background-clip:text) or (-webkit-background-clip:text)){.knurl,.knurl--sheen{color:var(--chalk);-webkit-text-fill-color:var(--chalk);background:none}}
+.js [data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js [data-reveal].is-in{opacity:1;transform:none}
+.skip{position:absolute;left:12px;top:-60px;z-index:200;background:var(--red);color:#fff;padding:10px 16px;border-radius:6px;text-decoration:none;font-weight:600}
+.skip:focus{top:44px}
+@keyframes sheen{from{background-position:110% 0,0 0,0 0,0 0}to{background-position:-10% 0,0 0,0 0,0 0}}
+@keyframes lineUp{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes slideIn{from{opacity:0;transform:translateX(-16px)}to{opacity:1;transform:none}}
+@keyframes headIn{from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes plateIn{from{opacity:0;transform:rotate(-25deg)}to{opacity:1;transform:none}}
+@keyframes band{0%,66.6%{background-size:0% 100%}100%{background-size:100% 100%}}
+@keyframes pulse{0%{transform:scale(.6);opacity:.9}100%{transform:scale(2.6);opacity:0}}
+
+/* ribbon + header */
+.ribbon{min-height:34px;display:flex;align-items:center;justify-content:center;padding:6px 14px;background:#000;color:rgba(241,239,233,.8);font:600 13px/1.3 Barlow,"Helvetica Neue",Arial,sans-serif;text-align:center;position:relative;z-index:30}
+.head{position:absolute;top:34px;left:0;right:0;z-index:20;height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 var(--gut);background:rgba(13,14,16,.6);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);animation:headIn .5s var(--ease) both}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;font-size:30px;white-space:nowrap}
+.mark .bar{width:2px;height:.8em;background:var(--red)}
+.mark .gym{color:var(--red)}
+.head-r{display:flex;align-items:center;gap:32px}
+.nav{display:flex;gap:32px}
+.nav a{font-family:"Bebas Neue",Impact,sans-serif;font-size:20px;letter-spacing:.04em;color:rgba(241,239,233,.85);text-decoration:none;padding:8px 0;transition:color .2s}
+.nav a:hover{color:#ff5a61}
+.btn--sm{min-height:44px;padding:12px 18px;font-size:15px}
+@media (max-width:899px){.nav{display:none}}
+@media (max-width:420px){.mark{font-size:24px;gap:7px}.btn--sm{padding:10px 12px;font-size:13px}.btn--sm svg{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:calc(100vh - 34px);min-height:calc(100dvh - 34px);overflow:hidden;background:radial-gradient(120% 80% at 75% 40%,#1d2024 0%,var(--black) 62%)}
+.hero-img{position:absolute;top:0;right:0;bottom:0;width:46%;height:100%;object-fit:cover;object-position:55% 40%;opacity:.5;filter:grayscale(.35) contrast(1.05);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 45%);mask-image:linear-gradient(90deg,transparent 0%,#000 45%);z-index:0}
+.plate-wrap{position:absolute;right:-12vw;top:50%;width:min(78vw,980px);aspect-ratio:1;transform:translateY(-50%);z-index:1;pointer-events:none}
+.plate-in{width:100%;height:100%;animation:plateIn 1.4s var(--ease) .1s both}
+.plate{width:100%;height:100%;display:block;transform:rotate(var(--r,0deg));will-change:transform}
+.plate .s{fill:none;stroke:rgba(241,239,233,.16)}
+.hero-c{position:absolute;left:var(--gut);bottom:clamp(56px,10vh,110px);max-width:min(900px,88vw);z-index:10}
+.eyebrow{display:flex;align-items:center;font:600 14px/1.2 Barlow,"Helvetica Neue",Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:rgba(241,239,233,.8);margin-bottom:18px}
+.hero .eyebrow{animation:slideIn .6s var(--ease) .3s both}
+h1{font-size:clamp(64px,10.5vw,176px);line-height:.86}
+h1 .ln{display:block;overflow:hidden;padding:.06em .12em 0 .1em;margin:-.06em -.12em 0 -.1em}
+h1 .in{display:inline-block;position:relative;isolation:isolate;animation:lineUp .8s var(--ease) both}
+h1 .ln:nth-child(1) .in{animation-delay:.4s}
+h1 .ln:nth-child(2) .in{animation-delay:.52s}
+h1 .hl{padding:0 .08em;margin:0 -.08em;background:linear-gradient(to top,transparent .2em,var(--red) .2em,var(--red) .54em,transparent .54em) left/100% 100% no-repeat;-webkit-box-decoration-break:clone;box-decoration-break:clone;animation:band 1.5s cubic-bezier(.7,0,.2,1) both}
+.sub{font-size:clamp(17px,1.3vw,20px);line-height:1.6;color:rgba(241,239,233,.8);max-width:36rem;margin-top:26px;animation:fadeUp .6s var(--ease) .8s both}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.ctas .btn:nth-child(1){animation:fadeUp .6s var(--ease) .9s both}
+.ctas .btn:nth-child(2){animation:fadeUp .6s var(--ease) 1s both}
+.strip{position:absolute;left:var(--gut);bottom:24px;z-index:10;display:flex;align-items:center;gap:14px;font:600 13px/1 Barlow,"Helvetica Neue",Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--chalk-60);animation:fade .6s var(--ease) 1.2s both}
+.strip i{width:6px;height:6px;background:var(--red);flex:none}
+@media (max-width:899px){.strip{display:none}}
+@media (max-height:720px) and (min-width:640px){h1{font-size:clamp(56px,8.5vw,140px)}.hero-c{bottom:48px}}
+
+/* sections */
+.sec{padding:clamp(88px,11vw,144px) var(--gut);position:relative}
+.wrap{max-width:1240px;margin:0 auto}
+
+/* the gym */
+.gym{background:var(--char)}
+.gym h2{font-size:clamp(52px,8vw,128px);margin-bottom:56px}
+.gym h2 span{display:block}
+.gym h2 span+span{color:var(--chalk-45)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+@media (max-width:899px){.cards{grid-template-columns:1fr}}
+@media (min-width:900px){.cards{grid-template-columns:1.12fr 1fr;grid-template-rows:auto auto}.card{min-height:0}.card--lead{grid-row:1/3}.cards .card:not(.card--lead) .idx{font-size:88px}.cards .card:not(.card--lead) h3{margin-top:28px}}
+.card.card--lead{background:linear-gradient(180deg,rgba(23,25,28,.30) 0%,rgba(23,25,28,.42) 40%,rgba(23,25,28,.95) 88%),url(assets/kettlebell-hero.webp) 50% 32%/cover no-repeat #17191c}
+.card--lead .photo-note{margin:14px 0 0}
+@media (max-width:899px){.card.card--lead{min-height:360px}}
+.card{background:var(--steel);border-radius:10px;padding:32px;min-height:340px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.card::before{content:"";position:absolute;left:0;top:0;width:4px;height:100%;background:var(--red);transform-origin:top}
+.js .card::before{transform:scaleY(0);transition:transform .7s var(--ease) .15s}
+.js .card.is-in::before{transform:none}
+.card .ph{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:50% 45%;border-radius:8px;margin-bottom:24px}
+.card .ic{width:48px;height:48px;fill:none;stroke:var(--chalk);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card .idx{font-size:clamp(120px,11vw,168px);color:rgba(241,239,233,.1);line-height:.72;margin:-6px -6px 0 0}
+.card--ph .idx{font-size:88px}
+.card h3{font-size:40px;margin-top:40px}
+.card p{font-size:16px;color:var(--chalk-70);margin-top:10px}
+.card-top{display:flex;align-items:flex-start;justify-content:space-between}
+.photo-note{font-size:12px;color:var(--chalk-60);margin-top:-14px;margin-bottom:20px}
+
+/* why */
+.why{background:var(--black);overflow:hidden}
+.why .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+@media (max-width:899px){.why .wrap{grid-template-columns:1fr;gap:40px}}
+.big{font-size:clamp(72px,12vw,200px);line-height:.82}
+.big span{display:block}
+.rows4 > div{border-top:1px solid var(--line);padding:22px 0}
+.rows4 > div:last-child{border-bottom:1px solid var(--line)}
+.rows4 h3{font-size:32px;display:flex;align-items:center;gap:12px}
+.rows4 h3::before{content:"";width:8px;height:8px;background:var(--red);flex:none;transform:translateY(-2px)}
+.rows4 p{font-size:16px;color:var(--chalk-70);margin-top:6px}
+.why-plate{position:absolute;left:-180px;bottom:-220px;width:520px;opacity:.6;pointer-events:none}
+
+/* find */
+.find{background:var(--char)}
+.find .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+@media (max-width:899px){.find .wrap{grid-template-columns:1fr}}
+.find h2{font-size:clamp(52px,7vw,112px)}
+.find .addr{font-size:20px;color:rgba(241,239,233,.85);margin-top:24px;max-width:28rem}
+.find .note{font-size:15px;color:var(--chalk-60);margin-top:14px}
+.map{background:var(--steel);border-radius:10px;aspect-ratio:4/3;position:relative;overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.map .road{stroke:rgba(241,239,233,.15);fill:none}
+.map .pin{position:absolute;left:56%;top:46%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:var(--red);box-shadow:0 0 0 3px rgba(13,14,16,.7)}
+.map .pin::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid var(--red);animation:pulse 2.4s ease-out infinite}
+.map .lbl{position:absolute;left:calc(56% + 14px);top:calc(46% - 30px);font-family:"Bebas Neue",Impact,sans-serif;font-size:22px;letter-spacing:.04em;color:var(--chalk)}
+.map small{position:absolute;right:14px;bottom:12px;font-size:12px;color:var(--chalk-60);letter-spacing:.08em;text-transform:uppercase}
+.find .btn{margin-top:16px}
+
+/* contact */
+.contact{background:var(--red);color:#fff;text-align:center}
+.contact h2{font-size:clamp(64px,11vw,184px);line-height:.84}
+.contact h2 span{display:block}
+.contact .lead{font-size:18px;margin-top:22px}
+.crow{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 36px;margin-top:44px}
+.crow a{display:inline-flex;align-items:center;gap:12px;font:600 20px/1.3 Barlow,"Helvetica Neue",Arial,sans-serif;color:#fff;text-decoration:none;padding:4px;overflow-wrap:anywhere}
+.crow a span{border-bottom:2px solid transparent;transition:border-color .2s}
+.crow a:hover span{border-color:#fff}
+.crow i{width:44px;height:44px;border-radius:50%;border:2px solid #fff;display:grid;place-items:center;flex:none}
+.crow svg{width:20px;height:20px;fill:none;stroke:#fff;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.contact :focus-visible{outline-color:#fff}
+
+/* footer */
+.foot{background:#000;color:var(--chalk-60);font-size:14px;padding:40px var(--gut);display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
+.foot .mark{font-size:26px;color:var(--chalk)}
+.foot nav{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 24px}
+.foot nav a{font-family:"Bebas Neue",Impact,sans-serif;font-size:19px;letter-spacing:.04em;color:var(--chalk);text-decoration:none;padding:8px 2px}
+.foot nav a:hover{color:#ff5a61}
+
+/* mobile action bar */
+.abar{display:none}
+@media (max-width:759px){
+  .abar{display:flex;align-items:center;justify-content:center;gap:10px;position:fixed;z-index:40;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));height:56px;border-radius:6px;background:linear-gradient(180deg,#e0323a,var(--red-dark));color:#fff;text-decoration:none;font:600 17px/1 Barlow,"Helvetica Neue",Arial,sans-serif;letter-spacing:.06em;box-shadow:0 12px 30px -8px rgba(0,0,0,.7);transition:transform .35s var(--ease),opacity .35s}
+  .abar svg{width:20px;height:20px}
+  .js .abar{transform:translateY(140%);opacity:0}
+  .js .abar.show{transform:none;opacity:1}
+  .foot{padding-bottom:92px}
+}
+
+/* responsive hero */
+@media (max-width:1023px){.plate-wrap{right:-25vw}h1{font-size:12vw}}
+@media (max-width:639px){
+  .hero{min-height:0;padding:140px var(--gut) 56px}
+  .hero-c{position:static;max-width:none}
+  h1{font-size:clamp(56px,16vw,96px)}
+  .plate-wrap{width:120vw;right:-55vw;top:30%;opacity:.7}
+  .hero-img{width:100%;height:58%;top:auto;opacity:.28;-webkit-mask-image:linear-gradient(0deg,#000 30%,transparent 100%);mask-image:linear-gradient(0deg,#000 30%,transparent 100%)}
+  .card{padding:26px;min-height:0}
+  .card .idx{font-size:96px}.card--ph .idx{font-size:72px}
+  .crow{flex-direction:column;align-items:center}.crow a{font-size:16px}
+}
+@media (max-width:559px){.ctas .btn{width:100%}}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .js [data-reveal]{opacity:1;transform:none}
+  .js .card::before{transform:none}
+  .js .abar{transform:none;opacity:1}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="ribbon">Concept redesign by Jeig Torio · not the business's official website</div>
+
+<header class="head">
+  <a class="mark disp" href="#top" aria-label="Marine House Gym, back to top"><span>Marine House</span><span class="bar" aria-hidden="true"></span><span class="gym">Gym</span></a>
+  <div class="head-r">
+    <nav class="nav" aria-label="Main">
+      <a href="#gym">The gym</a><a href="#why">Why us</a><a href="#find">Find us</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn btn--red btn--sm" href="mailto:marinehousegymltd@outlook.com?subject=Joining%20Marine%20House%20Gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email the gym</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top" aria-labelledby="h1">
+  <img class="hero-img" src="assets/kettlebell-hero.webp" width="1000" height="1497" alt="" aria-hidden="true" fetchpriority="high">
+  <div class="plate-wrap" aria-hidden="true"><div class="plate-in">
+    <svg class="plate" id="plate" viewBox="0 0 600 600">
+      <circle class="s" cx="300" cy="300" r="290" stroke-width="14"/>
+      <circle cx="300" cy="300" r="290" fill="none" stroke="#d7262e" stroke-width="14" stroke-dasharray="180 2000" opacity=".85" transform="rotate(125 300 300)"/>
+      <circle class="s" cx="300" cy="300" r="270" stroke-width="2"/>
+      <g class="s" stroke-width="2">
+        <rect x="240" y="78" width="120" height="44" rx="22"/>
+        <rect x="240" y="78" width="120" height="44" rx="22" transform="rotate(120 300 300)"/>
+        <rect x="240" y="78" width="120" height="44" rx="22" transform="rotate(240 300 300)"/>
+      </g>
+      <circle class="s" cx="300" cy="300" r="160" stroke-width="2"/>
+      <circle class="s" cx="300" cy="300" r="70" stroke-width="10"/>
+      <circle cx="300" cy="300" r="30" fill="#0d0e10" stroke="rgba(241,239,233,.16)" stroke-width="3"/>
+      <g id="ticks" class="s" stroke-width="2"></g>
+    </svg>
+  </div></div>
+  <div class="hero-c">
+    <p class="eyebrow"><span class="slashes" aria-hidden="true"><i></i><i></i><i></i></span>Community gym · Fulwell, Sunderland SR6</p>
+    <h1 class="disp" id="h1"><span class="ln"><span class="in">Old-school <span class="knurl knurl--sheen">Iron.</span></span></span><span class="ln"><span class="in"><span class="hl">New management.</span></span></span></h1>
+    <p class="sub">Proper old-school equipment, brand-new changing rooms and a recovery room, in the heart of SR6. One year strong and under new management.</p>
+    <div class="ctas" id="hero-ctas">
+      <a class="btn btn--red" href="mailto:marinehousegymltd@outlook.com?subject=Joining%20Marine%20House%20Gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email the gym</a>
+      <a class="btn btn--line" href="#find"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Find us</a>
+    </div>
+  </div>
+  <p class="strip" aria-label="Old-school kit, new changing rooms, recovery room, under new management">Old-school kit<i></i>New changing rooms<i></i>Recovery room<i></i>Under new management</p>
+</section>
+
+<section class="sec gym" id="gym" aria-labelledby="gym-h">
+  <div class="wrap">
+    <p class="eyebrow" data-reveal><span class="slashes" aria-hidden="true"><i></i><i></i><i></i></span>Inside Marine House</p>
+    <h2 class="disp" id="gym-h" data-reveal><span>Built on</span><span>real iron.</span></h2>
+    <div class="cards">
+      <article class="card card--lead" data-reveal>
+        <div class="card-top"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 20v8M12 15v18M36 15v18M42 20v8M12 24h24"/></svg><span class="idx disp" aria-hidden="true">01</span></div>
+        <div><h3 class="disp">Old-school equipment</h3><p>Classic, no-nonsense kit for people who like to lift.</p><p class="photo-note">Concept photo.</p></div>
+      </article>
+      <article class="card card--ph" data-reveal style="transition-delay:.1s">
+        <div>
+          <img class="ph" src="assets/changing-room.webp" width="1200" height="750" loading="lazy" alt="Matte black shower fittings on grey tiles">
+          <p class="photo-note">Concept photo.</p>
+          <div class="card-top"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 42V12a6 6 0 0 1 12 0"/><path d="M20 18h12l-2 4H22z"/><path d="M23 27v2M29 27v2M26 31v2M23 35v2M29 35v2"/></svg><span class="idx disp" aria-hidden="true">02</span></div>
+        </div>
+        <div><h3 class="disp">New changing rooms</h3><p>The changing rooms are brand new.</p></div>
+      </article>
+      <article class="card" data-reveal style="transition-delay:.2s">
+        <div class="card-top"><svg class="ic" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4v40M6.7 14l34.6 20M6.7 34l34.6-20"/><path d="M19 8l5 4 5-4M19 40l5-4 5 4M8 20l6 1 1-6M40 28l-6-1-1 6M8 28l6-1 1 6M40 20l-6 1-1-6"/></svg><span class="idx disp" aria-hidden="true">03</span></div>
+        <div><h3 class="disp">Recovery room</h3><p>A dedicated room to recover between sessions.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec why" id="why" aria-labelledby="why-h">
+  <div class="wrap">
+    <h2 class="disp big" id="why-h" data-reveal><span>One</span><span>year</span><span class="knurl">strong.</span></h2>
+    <div class="rows4">
+      <div data-reveal><h3 class="disp">Under new management</h3><p>New management, and a bold new look to match.</p></div>
+      <div data-reveal style="transition-delay:.08s"><h3 class="disp">A community gym</h3><p>A local gym for SR6, not a chain.</p></div>
+      <div data-reveal style="transition-delay:.16s"><h3 class="disp">Priced fairly</h3><p>Members point to the price as a reason to stay. Ask the gym for current memberships.</p></div>
+      <div data-reveal style="transition-delay:.24s"><h3 class="disp">Bold, strong, authentic</h3><p>The gym's own words for its new look.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec find" id="find" aria-labelledby="find-h">
+  <div class="wrap">
+    <div data-reveal>
+      <p class="eyebrow"><span class="slashes" aria-hidden="true"><i></i><i></i><i></i></span>Find us</p>
+      <h2 class="disp" id="find-h">9 Station Road, Fulwell.</h2>
+      <p class="addr">Marine House Gym, 9–10 Station Road, Fulwell, Sunderland SR6 9AA</p>
+      <p class="note">Opening hours: message the gym on Facebook or by email.</p>
+    </div>
+    <div data-reveal>
+      <div class="map" aria-hidden="true">
+        <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+          <path class="road" stroke-width="10" d="M-20 70 L420 150"/>
+          <path class="road" stroke-width="3" d="M-20 210 L420 250"/>
+          <path class="road" stroke-width="6" d="M150 -20 L260 320"/>
+          <path class="road" stroke-width="3" d="M300 -20 L330 320"/>
+          <path class="road" stroke-width="2" d="M40 -20 L90 320"/>
+          <path class="road" stroke-width="2" d="M-20 280 L200 40"/>
+          <path class="road" stroke-width="2" d="M260 110 L420 40"/>
+          <path class="road" stroke-width="2" d="M180 180 L420 200"/>
+        </svg>
+        <span class="pin"></span><span class="lbl">Marine House</span>
+        <small>Not to scale</small>
+      </div>
+      <a class="btn btn--red" href="https://www.google.com/maps/search/?api=1&amp;query=Marine+House+Gym+9+Station+Rd+Fulwell+Sunderland+SR6+9AA" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Open in Google Maps</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <h2 class="disp" id="contact-h" data-reveal><span>Come</span><span>train.</span></h2>
+    <p class="lead" data-reveal>Ask about memberships, hours or a first visit.</p>
+    <div class="crow" data-reveal>
+      <a href="mailto:marinehousegymltd@outlook.com"><i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></i><span>marinehousegymltd@outlook.com</span></a>
+      <a href="https://www.facebook.com/profile.php?id=61577064117599" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></i><span>Facebook</span></a>
+      <a href="https://www.instagram.com/marinehousegym_/" target="_blank" rel="noopener"><i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg></i><span>@marinehousegym_</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <a class="mark disp" href="#top" aria-label="Marine House Gym, back to top"><span>Marine House</span><span class="bar" aria-hidden="true"></span><span class="gym">Gym</span></a>
+  <nav aria-label="Footer"><a href="#gym">The gym</a><a href="#why">Why us</a><a href="#find">Find us</a><a href="#contact">Contact</a></nav>
+  <p>Concept redesign by Jeig Torio · not the business's official website</p>
+  <p>Photos are stock concept placeholders: the gym's own photos go here.</p>
+</footer>
+
+<a class="abar" id="abar" href="mailto:marinehousegymltd@outlook.com?subject=Joining%20Marine%20House%20Gym"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>EMAIL THE GYM</a>
+
+<script>
+(function(){
+  var g=document.getElementById('ticks'),ns='http://www.w3.org/2000/svg';
+  for(var i=0;i<24;i++){var a=i*15*Math.PI/180,l=document.createElementNS(ns,'line');
+    l.setAttribute('x1',(300+280*Math.sin(a)).toFixed(1));l.setAttribute('y1',(300-280*Math.cos(a)).toFixed(1));
+    l.setAttribute('x2',(300+288*Math.sin(a)).toFixed(1));l.setAttribute('y2',(300-288*Math.cos(a)).toFixed(1));g.appendChild(l)}
+  var els=[].slice.call(document.querySelectorAll('[data-reveal]'));
+  var abar=document.getElementById('abar');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target)}})},{threshold:.2});
+    els.forEach(function(e){io.observe(e)});
+    new IntersectionObserver(function(en){abar.classList.toggle('show',!en[0].isIntersecting)}).observe(document.getElementById('hero-ctas'));
+  } else { els.forEach(function(e){e.classList.add('is-in')}); abar.classList.add('show'); }
+  setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('is-in')})},2500);
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    var plate=document.getElementById('plate'),hero=document.getElementById('top'),vis=true,tick=false;
+    if('IntersectionObserver' in window) new IntersectionObserver(function(en){vis=en[0].isIntersecting}).observe(hero);
+    addEventListener('scroll',function(){if(!vis||tick)return;tick=true;requestAnimationFrame(function(){plate.style.setProperty('--r',(scrollY*.06).toFixed(2)+'deg');tick=false})},{passive:true});
+  }
+})();
+</script>
+</body>
+</html>
